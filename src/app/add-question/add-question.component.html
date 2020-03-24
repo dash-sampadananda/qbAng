@@ -1,0 +1,11 @@
+<label for="Branches"><strong>Branch : </strong></label>
+<select class="flex-container" [(ngModel)] = "brnselected" (ngModelChange) = "onBrnSelected($event)">
+  <!--  <option selected disabled value=""></option>Select the Branch</option>-->
+    <option  *ngFor = "let branch of branch" [value] = "branch.id">{{ branch.name }}</option>
+</select><br><br>
+<a *ngIf = "onbrnselected===true">
+<label for="semester"><strong>Sem : </strong></label>
+<select class="flex-container">
+    <option *ngFor = "let sem of semester" [value] = "sem">{{ sem }}</option>
+</select>>
+</a>
