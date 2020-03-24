@@ -1,0 +1,19 @@
+body {
+    background-image: url('C:\Users\OCAC\Pictures\Saved Pictures\Inspiring Wallpapers\Sea-Of-Sand-1-1024x576.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100%;
+    min-width:100%;
+    height:auto;
+    width:auto;
+    position:absolute;
+}
+body,html {
+    height: 100%;
+    margin: 0;
+}
+.midtable {
+	width:60%;
+	height:100%;
+	border:1px solid black;
+}

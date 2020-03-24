@@ -1,0 +1,18 @@
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: none;
+    border:1px solid black;
+    box-sizing: border-box;
+    height:35px;
+    width:100%;
+    border-radius:15px;
+    cursor: pointer;
+  }
+  
+  
+.flex-container > select {
+    width:100%;
+    margin: 5px;
+    text-align: center;
+}
