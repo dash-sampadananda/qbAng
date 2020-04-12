@@ -1,11 +1,13 @@
 import { Text } from '@angular/compiler/src/i18n/i18n_ast';
 import { Time } from '@angular/common';
 
-export class Branches
+export class Branch
 {
-    bid: Number;
-    name: String;
-    fullname: string;
+    constructor(
+        public id: Number,
+        public name: String,
+        public full_name: string
+    ) {}
 }
 
 export class Subjects

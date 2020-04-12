@@ -1,4 +1,4 @@
-import { Branches, Subjects, Questions } from '../questions-classes';
+import { Branch, Subjects, Questions } from '../questions-classes';
 import { Component, OnInit } from '@angular/core';
 import { Action } from 'rxjs/internal/scheduler/Action';
 
@@ -12,7 +12,7 @@ export class AddQuestionComponent implements OnInit {
 
   constructor() { }
 
-  branches:Branches[];
+  branches:Branch[];
   semester:Number[];
   subjects:Subjects[];
   modules:Number[];
@@ -20,8 +20,8 @@ export class AddQuestionComponent implements OnInit {
 
   ngOnInit(): void {
      this.branches = [
-        {bid: 1, name: "CSE", fullname: "Computer Science Engineering"},
-        {bid: 2, name: "CE", fullname: "Civil Engineering"}
+        {id: 1, name: "CSE", full_name: "Computer Science Engineering"},
+        {id: 2, name: "CE", full_name: "Civil Engineering"}
      ];
 
      this.semester = [ 1,2,3,4,5,6,7,8 ];

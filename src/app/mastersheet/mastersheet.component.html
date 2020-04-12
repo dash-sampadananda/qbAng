@@ -7,16 +7,16 @@
 <br><br>
 <div *ngIf = "activate===1">
     <div class = "grid-blocks" *ngFor = "let branch of branches">
-        <b>{{ branch.fullname }}</b>
+        <b>{{ branch.full_name }}</b>
     </div>
     <button class = "grid-blocks" (click)="activateform=1"><b>Add Branch</b></button>
-<form *ngIf = "activateform===1">
+<form *ngIf = "activateform===1"  [formGroup]="branchForm" (ngSubmit)="onSubmit(branchForm.value)" >
     <label for="name"><b>Enter short name : </b>
-    <input type="text"/>
+    <input type="text" name="name" formControlName="name" />
     </label><br>
-    <label for="fullname"><b>Enter the fullname :</b>
-    <input type="text"/>
+    <label for="full_name"><b>Enter the fullname :</b>
+    <input type="text" name="full_name" formControlName="full_name"/>
     </label>
-    <button type="submit" class="grid-blocks"  (click)="goBack()">Submit</button>
+    <input type="submit" value="Save">
 </form>
 </div>
