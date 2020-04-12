@@ -1,0 +1,48 @@
+.button {
+    display: block;
+    background-color: floralwhite;
+    border: 1px solid floralwhite;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    height:135px;
+    width:30%;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: large;
+    letter-spacing: 2px;
+  }
+
+  .button:hover {
+    background-color: rgb(71, 167, 245);
+    font-size: larger;
+  }
+
+  .grid-blocks {
+    display: flex;
+    padding: 18px;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .grid-blocks:hover {
+    background-color: rgb(71, 167, 245);
+    font-size: 17px;
+  }
+
+  .sameline {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+  option {
+    display: flex;
+    flex: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 35px;
+  }

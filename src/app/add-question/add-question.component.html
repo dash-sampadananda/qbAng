@@ -1,11 +1,49 @@
-<label for="Branches"><strong>Branch : </strong></label>
-<select class="flex-container" [(ngModel)] = "brnselected" (ngModelChange) = "onBrnSelected($event)">
-  <!--  <option selected disabled value=""></option>Select the Branch</option>-->
-    <option  *ngFor = "let branch of branch" [value] = "branch.id">{{ branch.name }}</option>
-</select><br><br>
-<a *ngIf = "onbrnselected===true">
-<label for="semester"><strong>Sem : </strong></label>
-<select class="flex-container">
-    <option *ngFor = "let sem of semester" [value] = "sem">{{ sem }}</option>
-</select>>
-</a>
+<div class = "header"><h1>Add your Question</h1></div>
+<form>
+    <div class="sameline">
+    <button class="flex-button" type="submit" (click)="showmsg()"><strong>Submit</strong></button>
+    <button class="flex-button" (click)="reloadpage()">Next</button>
+    </div>
+
+    <br><br>
+
+    <select class="flex-container" required>
+        <option [value]=""selected disabled>Select the Branch</option>
+        <option *ngFor = "let branch of branches" [value]="branch.id">{{ branch.name }}-{{ branch.fullname }}</option>
+    </select>
+
+    <br><br>
+
+    <div class="sameline">
+        <select class="flex" required>
+            <option [value]=""selected disabled>Semester</option>
+            <option *ngFor = "let sem of semester" [value]="sem">{{ sem }}</option>
+        </select>
+
+        <br><br>
+
+        <select class="flex-container" required>
+            <option [value]=""selected disabled>Select the Subject</option>
+            <option *ngFor = "let sub of subjects" [value]="sub.id">{{sub.subname}}-{{sub.fullname}}</option>
+        </select>
+    </div>
+
+    <br><br>
+
+    <div class="sameline">
+        <select class="flex" required>
+            <option [value]=""selected disabled>Module</option>
+            <option *ngFor = "let module of modules" [value]="module">{{ module }}</option>
+        </select>
+
+        <input class= "flex-form" type="Number" placeholder= "Enter the Mark for the Question"/>
+        
+        <select class="flex" required>
+            <option [value]=""selected disabled>Difficulty level</option>
+        </select>
+    </div>
+
+      <h3><strong>Enter your Question :-</strong></h3>
+        <textarea id="tinymceTextarea" cols="30" rows="15"></textarea>
+
+</form> 

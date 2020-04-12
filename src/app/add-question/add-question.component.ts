@@ -1,4 +1,4 @@
-import { Branches } from '../branches';
+import { Branches, Subjects, Questions } from '../questions-classes';
 import { Component, OnInit } from '@angular/core';
 import { Action } from 'rxjs/internal/scheduler/Action';
 
@@ -12,27 +12,42 @@ export class AddQuestionComponent implements OnInit {
 
   constructor() { }
 
-  branch:Branches[];
-  brnselected:Number;
+  branches:Branches[];
   semester:Number[];
-  onbrnselected:Boolean;
+  subjects:Subjects[];
+  modules:Number[];
+  Questions = [];
 
   ngOnInit(): void {
-     this.branch = [
-        {id: 1, name: "CSE"},
-        {id: 2, name: "EEE"},
-        {id: 3, name: "ENTC"},
-        {id: 4, name: "CE"},
-        {id: 5, name: "ME"}
+     this.branches = [
+        {bid: 1, name: "CSE", fullname: "Computer Science Engineering"},
+        {bid: 2, name: "CE", fullname: "Civil Engineering"}
      ];
+
      this.semester = [ 1,2,3,4,5,6,7,8 ];
 
-     this.brnselected = 2;
+     this.subjects = [
+        {sid: 1, subname: "OOPC", fullname: "Object Oriented Programming Concept"},
+        {sid: 1, subname: "JP", fullname: "Java Programming"}
+     ];
 
-  }
+     this.modules = [ 1,2,3,4 ];
 
-  onBrnSelected(value: any){
-         this.onbrnselected= true;
-  }
+     this.Questions = [
+        
+     ];
 
+    }
+    onentry(value: Number)
+    {
+      // this.Questions[].id++;
+    }
+    showmsg()
+    {
+       window.alert("The Question is successfully added.");
+    }
+    reloadpage()
+    {
+       window.location.reload();
+    }
 }

@@ -1,0 +1,22 @@
+<br><br>
+<div class="sameline">
+    <button class="button" (click)="activatecontent()">Branches</button>
+    <button class="button">Faculty</button>
+    <button class="button">Syllabus</button>
+</div>
+<br><br>
+<div *ngIf = "activate===1">
+    <div class = "grid-blocks" *ngFor = "let branch of branches">
+        <b>{{ branch.fullname }}</b>
+    </div>
+    <button class = "grid-blocks" (click)="activateform=1"><b>Add Branch</b></button>
+<form *ngIf = "activateform===1">
+    <label for="name"><b>Enter short name : </b>
+    <input type="text"/>
+    </label><br>
+    <label for="fullname"><b>Enter the fullname :</b>
+    <input type="text"/>
+    </label>
+    <button type="submit" class="grid-blocks"  (click)="goBack()">Submit</button>
+</form>
+</div>

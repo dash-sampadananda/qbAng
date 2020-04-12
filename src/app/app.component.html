@@ -1,14 +1,18 @@
 
 <html>
     <body>
-        <table width="100%" height="100%">
+        <div class = "header"><h1>Question Bank</h1></div>
+        <nav>
+            <a routerLink = "localhost:4200" target="_parent" routerLinkActive = "active">Home</a>
+            <a routerLink = "/add-questions" target="_parent" routerLinkActive = "active">Add Question</a>
+            <a routerLink = "/view-questions" target="_parent" routerLinkActive = "active">View Question</a>
+            <a >Generate Question</a>
+            <a routerLink = "/mastersheet" target="_parent" routerLinkActive = "active">Mastersheet</a>
+        </nav>
+        <table width="100%">
             <tr>
                 <td width="20%"></td>
-                <td class="midtable">
-                    <h1>hello world.</h1>
-
-                    <app-add-question></app-add-question>
-                </td>
+                <td class="midtable"><router-outlet></router-outlet></td>
                 <td width="20%"></td>
             </tr>
         </table>
